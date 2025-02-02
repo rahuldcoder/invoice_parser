@@ -3,6 +3,10 @@ import google.generativeai as genai
 import base64
 import json 
 import pandas as pd
+import streamlit as st
+
+
+api_key = st.secrets["google"]["api_key"]
 
 # Configure Gemini API
 # Create the model
@@ -14,7 +18,7 @@ generation_config = {
   "response_mime_type": "application/json",
 }
 
-genai.configure(api_key="AIzaSyAUtPX7slfhXnfwKPXnQOmFoVhevfC3L4c")
+genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash",generation_config=generation_config)
 
 # Streamlit app title
