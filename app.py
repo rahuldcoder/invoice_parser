@@ -22,7 +22,7 @@ genai.configure(api_key=api_key)
 model = genai.GenerativeModel("gemini-1.5-flash",generation_config=generation_config)
 
 # Streamlit app title
-st.title("PDF Text Extractor with Google's Gemini LLM")
+st.title("INVOICE EXTRACTOR")
 
 # File uploader
 uploaded_file = st.file_uploader("Upload a PDF file", type=["pdf"])
